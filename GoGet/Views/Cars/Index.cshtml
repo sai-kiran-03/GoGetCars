@@ -1,0 +1,25 @@
+﻿@model IEnumerable<GoGet.Models.Car>
+@{
+    ViewBag.Title = "Cars";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cars</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                Car
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var car in Model)
+        {
+            <tr>
+                <td>@car.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>
